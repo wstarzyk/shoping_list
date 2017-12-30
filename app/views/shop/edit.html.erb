@@ -1,0 +1,10 @@
+ <div>
+  <h2>Edit this item</h2>
+
+  <form action="/shop/update/<%= @shop.id %>">
+    <input class="" name="item" type="text" value="<%= @shop.item %>">
+    <input class="" name="cost" type="number" value="<%= @shop.cost %>">
+    <input class="" type="submit" value="Edit shop">
+    <a href="/" class="simple-link">Go back...</a>
+  </form>
+</div>

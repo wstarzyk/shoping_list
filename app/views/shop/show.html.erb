@@ -1,0 +1,12 @@
+<h3>Shop #<%= params[:id] %></h3>
+ <img class="" src=""></img>
+<h1>Shopping List</h1>
+  
+<div>
+ <input type="checkbox" name=""/>
+ <h2><%= @shop.item %></h2>
+<span><%= @shop.cost %> cost</span>
+ <a href="/shop/edit/<%= @shop.id %>" class="">Edit</a>
+ <a href="/shop/destroy/<%= @shop.id %>" class="">Delete</a>
+ <a href="/" class="">Go back...</a>
+</div>
