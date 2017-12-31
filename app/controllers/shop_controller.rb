@@ -1,17 +1,17 @@
 class ShopController < ApplicationController
     def index
-        @shops = shop.all
+        @shops = Shop.all
     end
     
     def show
-        @shop = shop.find_by_id(params[:id])
+        @shop = Shop.find_by_id(params[:id])
     end
     
     def new
     end
     
     def create
-        t = shop.new
+        t = Shop.new
         t.item = params['item']
         t.cost = params['cost']
         t.save
@@ -19,11 +19,11 @@ class ShopController < ApplicationController
     end
     
     def edit
-        @shop = shop.find_by_id(params[:id])
+        @shop = Shop.find_by_id(params[:id])
     end
     
     def update
-        t = shop.find_by_id(params['id'])
+        t = Shop.find_by_id(params['id'])
         t.item = params['item']
         t.cost = params['cost']
         t.save
@@ -31,7 +31,7 @@ class ShopController < ApplicationController
     end
     
     def destroy
-        t = shop.find_by_id(params[:id])
+        t = Shop.find_by_id(params[:id])
         t.destroy
         redirect_to "/"
     end

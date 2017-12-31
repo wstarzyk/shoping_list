@@ -1,10 +1,18 @@
- <div>
-  <h2>Edit this item</h2>
+
+
+<div class="container">
+    <%= image_tag "shopLogo.svg" %>
+     
+<h2>Edit this item</h2>
 
   <form action="/shop/update/<%= @shop.id %>">
     <input class="" name="item" type="text" value="<%= @shop.item %>">
     <input class="" name="cost" type="number" value="<%= @shop.cost %>">
-    <input class="" type="submit" value="Edit shop">
-    <a href="/" class="simple-link">Go back...</a>
+    <input class="" type="submit" value="EDIT">
+
   </form>
+  <br>
+    <a href="/" class="simple-link">BACK TO LIST</a>
+
+  
 </div>

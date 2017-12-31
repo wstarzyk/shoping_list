@@ -1,13 +1,24 @@
-<ul class="card">
-<% @shops.each do |shop| %>
-  <li>
-    <input type="checkbox" name=""/>
-    <a href="/shop/show/<%= shop.id %>"><%= shop.item %></a>
-    <span><%= shop.cost %></span>
-  </li>
-<% end %>
-</ul>
-
-<div>
-<a href="/shop/new">Add a item</a>
+<div class="container">
+    <%= image_tag "shopLogo.svg" %>
+     
+   <% @shops.each do |shop| %>
+    <div class="items">
+      <input class="itemsDetails" type="checkbox" name=""/>
+      <a class="itemsDetails" href="/shop/show/<%= shop.id %>"><%= shop.item %></a>
+      <div class="itemsDetails"><%= shop.cost %></div>
+    </div>
+    <hr>
+  <% end %>
+ 
+  <div>
+  <a id="addItem" href="/shop/new">ADD TO LIST</a>
+  </div>
+  
+ 
+  
+  
+  
+  
 </div>
+
+  
